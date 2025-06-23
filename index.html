@@ -3,8 +3,8 @@
 <head>
   <title>Chat Room</title>
   <style>
-    body { font-family: Arial; }
-    #messages { list-style: none; padding: 0; max-height: 300px; overflow-y: scroll; }
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+    #messages { list-style: none; padding: 0; max-height: 300px; overflow-y: scroll; border: 1px solid #ccc; }
     #form { display: flex; margin-top: 10px; }
     #input { flex: 1; padding: 10px; }
     #send { padding: 10px; }
@@ -12,9 +12,11 @@
 </head>
 <body>
   <h2>Socket.IO Chat Room</h2>
+  <p><em>Previous messages will load when you connect.</em></p>
   <ul id="messages"></ul>
   <form id="form">
-    <input id="input" autocomplete="off" /><button id="send">Send</button>
+    <input id="input" autocomplete="off" placeholder="Type your message here..." />
+    <button id="send">Send</button>
   </form>
 
   <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
