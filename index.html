@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Room</title>
+  <style>
+    body { font-family: Arial; }
+    #messages { list-style: none; padding: 0; max-height: 300px; overflow-y: scroll; }
+    #form { display: flex; margin-top: 10px; }
+    #input { flex: 1; padding: 10px; }
+    #send { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Socket.IO Chat Room</h2>
+  <ul id="messages"></ul>
+  <form id="form">
+    <input id="input" autocomplete="off" /><button id="send">Send</button>
+  </form>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
